@@ -2,6 +2,7 @@
 using Leave_management.Contract;
 using Leave_management.Data;
 using Leave_management.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -21,6 +22,7 @@ namespace Leave_management.Controllers
             _repo = repo;
             _mapper = mapper;
         }
+        [Authorize(Roles = "Admistrator")]
         // GET: LeaveTypesController
         public ActionResult Index()
         {
