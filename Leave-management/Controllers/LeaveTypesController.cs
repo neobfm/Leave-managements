@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace Leave_management.Controllers
 {
+    
     public class LeaveTypesController : Controller
     {
         private readonly ILeaveTypeRepository _repo;
@@ -22,7 +23,7 @@ namespace Leave_management.Controllers
             _repo = repo;
             _mapper = mapper;
         }
-        [Authorize(Roles = "Admistrator")]
+        [Authorize(Roles = "Administrator")]
         // GET: LeaveTypesController
         public ActionResult Index()
         {
