@@ -10,7 +10,7 @@ namespace Leave_management.Models
 {
     public class LeaveAllocationVM
     {
-        [Key]
+   
         public int Id { get; set; }
       
         public int NumberOfDays { get; set; }
